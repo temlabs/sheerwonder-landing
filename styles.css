@@ -10,6 +10,10 @@ a {
   color: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "dm-sans";
   src: url("fonts/DMSans-VariableFont.ttf");
@@ -124,7 +128,8 @@ section {
 }
 
 #reason,
-#method {
+#method,
+#cta {
   padding-top: 10vw;
   min-height: 100vh;
 }
@@ -150,4 +155,7 @@ footer {
   #hero h1 {
     font-size: 2.5rem;
   }
+}
+
+.input {
 }
