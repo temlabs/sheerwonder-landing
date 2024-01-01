@@ -39,14 +39,30 @@ body {
 }
 
 .background-gradient {
-  background: rgb(46, 0, 0);
+  background: rgb(46, 0, 0); /* Fallback for older browsers */
+  background: -webkit-linear-gradient(
+    183deg,
+    rgba(46, 0, 0, 1) 0%,
+    rgba(2, 4, 18, 1) 100%
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: -moz-linear-gradient(
+    183deg,
+    rgba(46, 0, 0, 1) 0%,
+    rgba(2, 4, 18, 1) 100%
+  ); /* Firefox 3.6-15 */
+  background: -o-linear-gradient(
+    183deg,
+    rgba(46, 0, 0, 1) 0%,
+    rgba(2, 4, 18, 1) 100%
+  ); /* Opera 11.1-12 */
   background: linear-gradient(
     183deg,
     rgba(46, 0, 0, 1) 0%,
     rgba(2, 4, 18, 1) 100%
-  );
+  ); /* Standard syntax, for modern browsers */
   background-attachment: fixed;
   position: fixed;
+
   z-index: -1;
 }
 
@@ -130,7 +146,7 @@ section {
 #reason,
 #method,
 #cta {
-  padding-top: 10vw;
+  padding-top: 20vw;
   min-height: 100vh;
 }
 
